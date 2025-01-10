@@ -7,6 +7,8 @@ package org.example.word;
 //한번 만들어서 여러 번 사용하는 객체
 
 
+import java.util.Scanner;
+
 public class WordUI {
 
     private WordService service;
@@ -17,6 +19,19 @@ public class WordUI {
 
     public void exam(){
 
+        Scanner scanner = new Scanner(System.in);
+
+        WordVO word = this.service.getNextWord();
+
+        System.out.println(word.getKor());
+
+        String answer = scanner.nextLine();
+
+        if(answer.equals(word.getEng())){
+            System.out.println("Correct!!!");
+        }else {
+            System.out.println("Wrong!");
+        }
 
     }
 
