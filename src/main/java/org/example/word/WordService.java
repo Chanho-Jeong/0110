@@ -2,8 +2,6 @@ package org.example.word;
 
 public class WordService {
 
-
-
     public WordService(){
 
     }
